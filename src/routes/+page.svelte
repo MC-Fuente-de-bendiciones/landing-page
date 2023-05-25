@@ -5,10 +5,10 @@
 
 <section class="min-h-screen flex">
     <video autoplay muted loop playsinline
-           class="h-screen w-screen object-cover absolute -z-50 bg-black">
+           class="min-h-screen h-auto w-screen object-cover absolute -z-50 bg-black">
         <source src={bgVideoFdb} type="video/mp4"/>
     </video>
-    <div class="flex items-center px-4 md:px-40 pt-[66px] w-full">
+    <div class="flex items-center px-4 pb-4 md:px-40 mt-[66px] w-full">
         <div class="max-w-[100%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] text-white">
             <h1 class="mb-5 text-5xl md:text-6xl lg:text-8xl font-bold">Porque en ti está la fuente de la vida</h1>
             <div class="mb-5 text-2xl md:text-3xl">
@@ -28,7 +28,7 @@
     </div>
 </section>
 
-<section class="h-[calc(100vh-66px)] flex justify-center items-center bg-white">
+<section class="h-section flex justify-center items-center bg-white">
     <div class="container h-fit p-4">
         <h2 class="text-3xl font-light md:font-normal md:text-5xl">
             Fuente de Bendiciones es una iglesia cristiana que cree en la Biblia como la Palabra de Dios y en
@@ -57,6 +57,10 @@
 
 <style>
     .btn-flat-black {
-        @apply text-white bg-black rounded p-4;
+        @apply text-white bg-black rounded p-3;
+    }
+
+    .h-section {
+        min-height: calc(100vh - 66px);
     }
 </style>
