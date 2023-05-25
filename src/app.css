@@ -6,3 +6,11 @@
     /* Constants.navbarHeight */
     min-height: calc(100vh - 66px);
 }
+
+.font-delicious-handrawn {
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.font-dela-gothic-one {
+    font-family: 'Dela Gothic One', monospace;
+}
