@@ -1,6 +1,6 @@
 <script>
-    import fdbLogo from '$lib/images/fdb-logo.png';
-    import cmnLogo from '$lib/images/cmn-logo.svg';
+    import fdbLogo from '$lib/images/logos/fdb-logo.png';
+    import cmnLogo from '$lib/images/logos/cmn-logo.svg';
     import {page} from '$app/stores';
     import {afterNavigate} from "$app/navigation";
 
@@ -27,7 +27,7 @@
     $: logo = logoActual;
 </script>
 
-<div class="absolute w-full bg-black">
+<div class="fixed w-full bg-black">
     <div class="navbar container m-auto">
         <div class="navbar-start">
             <img src="{logo}" alt="Fuente de bendiciones logo"
