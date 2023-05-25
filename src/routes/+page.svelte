@@ -1,6 +1,16 @@
 <script>
     import bgVideoFdb from '$lib/videos/bg-video-fdb.mp4';
     import descImg from '$lib/images/photos/desc-img.png';
+    import {Constants} from "../shared/constants/Constants.ts";
+
+    const scrollIntoSection = () => {
+        const sectionAbout = document.getElementById('section-about');
+        scrollY = sectionAbout.offsetTop - Constants.navbarHeight;
+        scroll({
+            top: scrollY,
+            behavior: 'smooth'
+        });
+    };
 </script>
 
 <section class="min-h-screen flex">
@@ -17,7 +27,7 @@
                 <span class="font-bold">SALMO 36:9</span>
             </div>
             <div class="flex flex-wrap gap-4">
-                <button class="btn-flat-black">
+                <button on:click|preventDefault={scrollIntoSection} class="btn-flat-black">
                     ¿Qué es Fuente de Bendiciones?
                 </button>
                 <button class="btn-flat-black">
@@ -28,7 +38,7 @@
     </div>
 </section>
 
-<section class="h-section flex justify-center items-center bg-white">
+<section id="section-about" class="h-section flex justify-center items-center bg-white">
     <div class="container h-fit p-4">
         <h2 class="text-3xl font-light md:font-normal md:text-5xl">
             Fuente de Bendiciones es una iglesia cristiana que cree en la Biblia como la Palabra de Dios y en
@@ -61,6 +71,7 @@
     }
 
     .h-section {
+        /* Constants.navbarHeight */
         min-height: calc(100vh - 66px);
     }
 </style>
