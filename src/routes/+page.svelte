@@ -14,7 +14,10 @@
 </script>
 
 <section class="h-section flex">
-    <video autoplay muted loop playsinline
+    <video autoplay
+           muted
+           loop
+           playsinline
            class="h-section h-auto w-screen object-cover absolute -z-50 bg-black">
         <source src={bgVideoFdb} type="video/mp4"/>
     </video>
@@ -27,7 +30,7 @@
                 <span class="font-bold">SALMO 36:9</span>
             </div>
             <div class="flex flex-wrap gap-4">
-                <button on:click|preventDefault={scrollIntoSection} class="btn-flat-black">
+                <button on:click={scrollIntoSection} class="btn-flat-black">
                     ¿Qué es Fuente de Bendiciones?
                 </button>
                 <button class="btn-flat-black">
