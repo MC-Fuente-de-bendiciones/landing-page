@@ -3,7 +3,7 @@
     import conviccionesPoster from '$lib/images/cmn/convicciones-poster.jpeg';
     import {fade, fly} from 'svelte/transition';
 
-    export let videoFinalizado = true;
+    export let videoFinalizado = false;
 
     const toggleMuted = (event) => {
         event.target.muted = !event.target.muted;
