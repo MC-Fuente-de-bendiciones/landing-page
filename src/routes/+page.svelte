@@ -65,13 +65,8 @@
 </section>
 
 
-<style>
+<style lang="postcss">
     .btn-flat-black {
         @apply text-white bg-black rounded p-3;
-    }
-
-    .h-section {
-        /* Constants.navbarHeight */
-        min-height: calc(100vh - 66px);
     }
 </style>
