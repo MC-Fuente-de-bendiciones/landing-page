@@ -13,12 +13,12 @@
     };
 </script>
 
-<section class="min-h-screen flex">
+<section class="h-section flex">
     <video autoplay muted loop playsinline
-           class="min-h-screen h-auto w-screen object-cover absolute -z-50 bg-black">
+           class="h-section h-auto w-screen object-cover absolute -z-50 bg-black">
         <source src={bgVideoFdb} type="video/mp4"/>
     </video>
-    <div class="flex items-center px-4 pb-4 md:px-40 mt-[66px] w-full">
+    <div class="flex items-center px-4 pb-4 md:px-40 w-full">
         <div class="max-w-[100%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] text-white">
             <h1 class="mb-5 text-5xl md:text-6xl lg:text-8xl font-bold">Porque en ti está la fuente de la vida</h1>
             <div class="mb-5 text-2xl md:text-3xl">
