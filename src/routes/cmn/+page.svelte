@@ -1,9 +1,9 @@
 <script>
     import conviccionesVideo from '$lib/videos/convicciones.mp4';
-    import conviccionesPostal from '$lib/images/cmn/convicciones-poster.jpeg';
+    import conviccionesPoster from '$lib/images/cmn/convicciones-poster.jpeg';
     import {fade, fly} from 'svelte/transition';
 
-    export let videoFinalizado = false;
+    export let videoFinalizado = true;
 
     const toggleMuted = (event) => {
         event.target.muted = !event.target.muted;
@@ -16,15 +16,16 @@
     $: videoFinalizado;
 </script>
 
-<section id="hero" class="h-section relative flex justify-center items-center px-4">
+<section id="hero" class="h-section flex justify-center items-center px-4">
     {#if !videoFinalizado}
-        <div class="w-full h-fit absolute md:w-4/5 lg:w-1/2 xl:w-4/5 p-4">
+        <div class="w-full h-fit absolute md:w-4/5 lg:w-1/2 xl:w-1/2 p-4">
             <video on:ended={onEnded}
                    on:click={toggleMuted}
                    in:fade={{duration: 1500}}
                    out:fly="{{y: 100, duration: 200}}"
                    autoplay
                    playsinline
+                   poster="{conviccionesPoster}"
                    class="w-full rounded-2xl">
                 <source src="{conviccionesVideo}"/>
             </video>
@@ -39,8 +40,8 @@
                   class="portrait:text-[4vh] landscape:text-[4vw] text-yellow-300 font-dela-gothic-one uppercase">
                 Convicciones 2.0
             </span>
-            <picture in:fly="{{y: -50, duration: 500, delay: 1500}}" class="m-auto w-4/5">
-                <img src="{conviccionesPostal}" alt="conviccionesPostal" class="rounded-lg shadow-2xl">
+            <picture in:fly="{{y: -50, duration: 500, delay: 1500}}" class="w-full lg:w-1/2 m-auto">
+                <img src="{conviccionesPoster}" alt="conviccionesPostal" class="rounded-lg shadow-2xl w-full">
             </picture>
         </div>
     {/if}
