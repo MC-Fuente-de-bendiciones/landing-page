@@ -5,6 +5,7 @@
 .h-section {
     /* Constants.navbarHeight */
     min-height: calc(100vh - 66px);
+    @apply flex justify-center items-center;
 }
 
 .font-delicious-handrawn {

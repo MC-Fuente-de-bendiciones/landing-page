@@ -16,7 +16,7 @@
     $: videoFinalizado;
 </script>
 
-<section id="hero" class="h-section flex justify-center items-center px-4">
+<section id="hero" class="h-section px-4">
     {#if !videoFinalizado}
         <div class="w-full h-fit absolute md:w-4/5 lg:w-1/2 xl:w-1/2 p-4">
             <video on:ended={onEnded}

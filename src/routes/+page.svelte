@@ -1,6 +1,8 @@
+<!-- Inicio - / -->
 <script>
     import bgVideoFdb from '$lib/videos/bg-video-fdb.mp4';
     import descImg from '$lib/images/photos/desc-img.png';
+    import fdbKids from '$lib/images/fbd-kids/ministerios-carousel.png';
     import {Constants} from "../shared/constants/Constants.ts";
     import {fly} from "svelte/transition";
 
@@ -14,12 +16,13 @@
     };
 </script>
 
-<section class="h-section flex">
+<!-- Seccion: Hero -->
+<section class="h-section">
     <video autoplay
            muted
            loop
            playsinline
-           class="h-section h-auto w-screen object-cover absolute -z-50 bg-black">
+           class="min-h-[calc(100vh-66px)] h-auto w-screen object-cover absolute -z-50 bg-black">
         <source src={bgVideoFdb} type="video/mp4"/>
     </video>
     <div in:fly="{{x: -100, duration: 1500}}"
@@ -43,19 +46,22 @@
     </div>
 </section>
 
-<section id="section-about" class="h-section flex justify-center items-center bg-white">
+<!-- Seccion: About -->
+<section id="section-about" class="h-section bg-white text-gray-800">
     <div class="container h-fit p-4">
-        <h2 class="text-3xl font-light md:font-normal md:text-5xl">
-            Fuente de Bendiciones es una iglesia cristiana que cree en la Biblia como la Palabra de Dios y en
-            Jesucristo como el único camino para llegar a Dios.
-        </h2>
+        <div class="text-3xl font-light md:font-normal md:text-5xl">
+            <span class="font-bold">Somos Fuente de Bendiciones,</span> una familia iglesia con los brazos abiertos a
+            todas aquellas personas que
+            lleguen a nosotros en cualquier circunstancia.
+        </div>
         <div class="divider"></div>
         <div class="flex flex-col-reverse md:flex-row gap-4">
             <div class="w-full md:w-1/2 flex flex-col justify-center gap-4">
-                <p class="text-lg md:text-2xl">
-                    Nuestra misión es llevar el mensaje de salvación a todas las personas, para que puedan tener una
-                    relación personal con Dios y disfrutar de una vida abundante y eterna.
-                </p>
+                <div class="text-lg md:text-2xl">
+                    Nuestro propósito es amarlos, cuidarlos y guiarlos hacia un
+                    nuevo estilo de vida que Jesús nos ofrece, enseñándoles el
+                    camino para que ellos vayan y hagan lo mismo con otros.
+                </div>
                 <div class="flex flex-wrap">
                     <button class="btn-flat-black">
                         ¿Dónde puedo asistir?
@@ -63,12 +69,42 @@
                 </div>
             </div>
             <div class="md:w-1/2">
-                <img src="{descImg}" alt="descImg" class="m-auto shadow-xl rounded">
+                <img src="{descImg}" alt="descImg" class="m-auto shadow-xl rounded-xl">
             </div>
         </div>
     </div>
 </section>
 
+<!-- Seccion: Ministerios -->
+<section class="h-section bg-black text-white">
+    <div class="container h-fit p-4">
+        <div class="text-3xl font-light md:font-normal md:text-5xl">
+            Ministerios
+        </div>
+        <div class="divider"></div>
+        <div class="flex flex-col md:flex-row gap-4">
+            <div class="md:w-2/3">
+                <img src="{fdbKids}" alt="fdbKids" class="m-auto w-full">
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col justify-center gap-4">
+                <div class="text-lg md:text-2xl">
+                    FdB Kids es un ministerio que busca enseñar a los niños
+                    sobre el amor de Dios y su palabra, de una manera divertida
+                    y creativa.
+                </div>
+                <div class="flex flex-wrap">
+                    <button class="btn-flat-black">
+                        Conocer más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seccion: Ubicacion -->
+<section class="h-section bg-white">
+</section>
 
 <style lang="postcss">
     .btn-flat-black {
